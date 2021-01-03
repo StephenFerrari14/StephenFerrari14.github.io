@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zxx" class="swup-enabled">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#2B2B35" />
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./static/css/font-awesome.min.css" />
+  <!-- Clean up the rest of the css -->
+  <link rel="stylesheet" href="./static/css/style.css" />
+
+  <title>Stephen Ferrari</title>
+  <style id="smooth-scrollbar-style">
+    .scroll-content {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  </style>
+  <!-- Clean up the rest of the css -->
+  <link rel="stylesheet" href="./static/css/color-1.css" />
+  <!-- Come up with a logo besides your face -->
+  <link rel="icon" type="image/png" href="./static/images/head.png" />
+</head>
+
+<body>
+  <!-- Clean up the rest of the css -->
+  <style>
+    .color-change {
+      top: 30vh;
+      right: -50px;
+      padding: 5px 5px 0;
+      background-color: rgba(250, 250, 252, 1);
+      position: fixed;
+      z-index: 99999999999999999999999999999999;
+      border-radius: 0 0 2px 0;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+    }
+
+    .active-changer {
+      right: 0;
+    }
+
+    .swapColor {
+      height: 40px;
+      width: 40px;
+      display: block;
+      margin-bottom: 5px;
+      border-radius: 1px;
+      filter: brightness(100%);
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+    }
+
+    .swapColor:hover {
+      filter: brightness(110%);
+    }
+
+    .orange {
+      background-color: #ffc107;
+    }
+
+    .open-changer {
+      cursor: pointer;
+      position: absolute;
+      background-color: rgba(250, 250, 252, 1);
+      height: 40px;
+      width: 40px;
+      top: 0;
+      left: -40px;
+      color: rgba(32, 32, 42, 1);
+      display: flex;
+      justify-content: center;
+    }
+
+    .open-changer i {
+      align-self: center;
+      animation: rotate 2s infinite linear;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <div class="art-app">
+    <div class="art-mobile-top-bar"></div>
+
+    <div class="art-app-wrapper">
+      <div class="art-app-container">
+        <div class="art-info-bar">
+          <div class="art-info-bar-frame">
+            <div class="art-header">
+              <div class="art-avatar">
+                <a data-fancybox="avatar" href="./images/head.png" class="art-avatar-curtain">
+                  <img src="./static/images/head.png" alt="avatar" />
+                  <!-- <i class="fas fa-expand"></i> -->
+                </a>
+              </div>
+              <h5 class="art-name mb-10"><a href="">Stephen Ferrari</a></h5>
+              <div class="art-sm-text">Senior Software Engineer</div>
+            </div>
+
+            <div id="scrollbar2" class="art-scroll-frame" data-scrollbar="true" tabindex="-1"
+              style="overflow: hidden; outline: none">
+              <div class="scroll-content">
+                <div class="art-table p-15-15">
+                  <ul>
+                    <li>
+                      <h6>City:</h6>
+                      <span>Boston, MA</span>
+                    </li>
+                    <li>
+                      <h6>Age:</h6>
+                      <span>28</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="art-ls-divider"></div>
+                <div class="art-skills-header art-skills">Skills</div>
+
+                <div class="art-hard-skills p-15-15">
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading">
+                      <h6>Java</h6>
+                    </div>
+                    <div class="art-skills">Spring</div>
+                    <div class="art-skills">Maven</div>
+                    <div class="art-skills">Jooq</div>
+                  </div>
+
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading">
+                      <h6>Databases</h6>
+                    </div>
+                    <div class="art-skills">PostgreSQL</div>
+                    <div class="art-skills">Snowflake</div>
+                    <div class="art-skills">Firebase</div>
+                    <div class="art-skills">MSSQL</div>
+                    <div class="art-skills">Aerospike</div>
+                  </div>
+
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading">
+                      <h6>JavaScript</h6>
+                    </div>
+                    <div class="art-skills">React</div>
+                    <div class="art-skills">Material UI</div>
+                    <div class="art-skills">Webpack</div>
+                    <div class="art-skills">React Native</div>
+                  </div>
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading">
+                      <h6>Node.js</h6>
+                    </div>
+                    <div class="art-skills">Express</div>
+                    <div class="art-skills">Hubot</div>
+                  </div>
+
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading">
+                      <h6>Python</h6>
+                    </div>
+                    <div class="art-skills">Flask</div>
+                    <div class="art-skills">FastAPI</div>
+                  </div>
+
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading">
+                      <h6>Services</h6>
+                    </div>
+                    <div class="art-skills">Slack API</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-ls-social">
+            <a href="https://www.linkedin.com/in/stephen-ferrari-80150465/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/StephenFerrari14" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/stovecodes" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="art-content">
+          <div class="art-curtain"></div>
+
+          <div class="art-top-bg">
+            <div class="art-top-bg-overlay"></div>
+          </div>
+
+          <div class="transition-fade" id="swup" data-swup="0">
+            <div id="scrollbar" class="art-scroll-frame" data-scrollbar="true" tabindex="-1"
+              style="overflow: hidden; outline: none">
+              <div class="scroll-content">
+                <div class="container-fluid">
+                  <div class="row p-60-0 p-lg-30-0 p-md-15-0">
+                    <div class="col-lg-12">
+                      <div class="art-a art-banner">
+                        <div class="art-banner-back"></div>
+                        <div class="art-banner-dec"></div>
+                        <div>
+                          <p>
+                            Software engineer, chip enthusiast, and avid
+                            skiier. New England born working in Boston
+                            focusing on backend systems and data
+                            infrastructure. In my spare time I hack on the
+                            Slack API, pickle food, make pasta, and play video
+                            games.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid">
+                  <div class="row p-30-0">
+                    <div class="col-md-4 col-6">
+                      <div class="art-counter-frame" style="opacity: 1">
+                        <div class="art-counter-box">
+                          <span class="art-counter" style="opacity: 1">5</span>
+                        </div>
+                        <h6>Years Experience</h6>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <div class="art-counter-frame" style="opacity: 1">
+                        <div class="art-counter-box">
+                          <span class="art-counter" style="opacity: 1">7</span>
+                        </div>
+                        <h6>Watches Owned</h6>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <div class="art-counter-frame" style="opacity: 1">
+                        <div class="art-counter-box">
+                          <span class="art-counter" style="opacity: 1">9</span>
+                        </div>
+                        <h6>Countries Visited</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="art-section-title">
+                        <div class="art-title-frame">
+                          <h4>Work Experience</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-timeline">
+                      <div class="art-timeline-item">
+                        <div class="art-timeline-mark-light"></div>
+                        <div class="art-timeline-mark"></div>
+                        <div class="art-a art-timeline-content">
+                          <div class="art-card-header">
+                            <div class="art-left-side">
+                              <h5>Touchplan</h5>
+                              <div class="art-el-suptitle mb-15">
+                                Senior Software Engineer
+                              </div>
+                            </div>
+                            <div class="art-right-side">
+                              <span class="art-date">July 2020 - Present</span>
+                            </div>
+                          </div>
+                          <p>
+                            Manage data infrastructure, develop data pipelines
+                            for business intelligence developers, provide
+                            services for the Touchplan application to leverage
+                            relational data.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="art-timeline-item">
+                        <div class="art-timeline-mark-light"></div>
+                        <div class="art-timeline-mark"></div>
+
+                        <div class="art-a art-timeline-content">
+                          <div class="art-card-header">
+                            <div class="art-left-side">
+                              <h5>Wayfair</h5>
+                              <div class="art-el-suptitle mb-15">
+                                Software Engineer
+                              </div>
+                            </div>
+                            <div class="art-right-side">
+                              <span class="art-date">April 2016 - July 2020</span>
+                            </div>
+                          </div>
+                          <p>
+                            Technical lead for Sponsored Products platform for
+                            suppliers to pay for more viewable placements on
+                            the storefront with a 40 million dollar yearly run
+                            rate.
+                          </p>
+                          <p>
+                            Technical lead of platform for Business
+                            Intelligence users to develop, version control,
+                            and schedule data transform and pipeline scripts.
+                            500 users daily ranging from analysts to data
+                            engineers and data scientists. Manager of 3
+                            engineers.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="art-timeline-item">
+                        <div class="art-timeline-mark-light"></div>
+                        <div class="art-timeline-mark"></div>
+
+                        <div class="art-a art-timeline-content">
+                          <div class="art-card-header">
+                            <div class="art-left-side">
+                              <h5>
+                                Novartis Institute of Biomedial Research
+                              </h5>
+                              <div class="art-el-suptitle mb-15">
+                                Application Developer
+                              </div>
+                            </div>
+                            <div class="art-right-side">
+                              <span class="art-date">Sept 2014 - May 2015</span>
+                            </div>
+                          </div>
+                          <p>
+                            Developed an array of internal applications for
+                            scientific employees ranging from workflow
+                            management to data recording.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row p-0-0">
+                    <div class="col-lg-12">
+                      <div class="art-section-title">
+                        <div class="art-title-frame">
+                          <h4>Education</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="art-a art-service-icon-box">
+                        <div class="art-service-ib-content">
+                          <h5 class="mb-15">
+                            University of Massachusetts Amherst
+                          </h5>
+                          <p>Class of 2014</p>
+                          <p class="art-education-text">
+                            Bachelors of Science, Computer Science
+                          </p>
+                          <p class="art-education-text">
+                            Minor in Mathemetics
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row p-0-0">
+                    <div class="col-lg-12">
+                      <div class="art-section-title">
+                        <div class="art-title-frame">
+                          <h4>Projects</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">Muscal</div>
+                          </div>
+                          <div class="art-price-list">
+                            Calendar app to track which muscle groups are
+                            worked out weekly.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>React</li>
+                            <li>Material UI</li>
+                            <li>Firebase</li>
+                            <!-- <li class="art-empty-item">Logo design</li> -->
+                          </ul>
+                          <a href="http://muscal.headdesk.us/calendar" target="_blank"
+                            class="art-link art-color-link art-w-chevron">Link</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">Pyomc</div>
+                          </div>
+                          <div class="art-price-list">
+                            Leverage Python more easily in Java projects by
+                            injecting Java pom files into your Python code for
+                            a shared configuration.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>Python</li>
+                            <li>Click</li>
+                          </ul>
+                          <a href="https://pypi.org/project/pyomc/" target="_blank"
+                            class="art-link art-color-link art-w-chevron">Pypi</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">RI Summer Meals</div>
+                          </div>
+                          <div class="art-price-list">
+                            App for kids to find free meal sites in Rhode
+                            Island.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>React Native</li>
+                          </ul>
+                          <a href="https://apps.apple.com/us/app/ri-summer-meals/id1401097025" target="_blank"
+                            class="art-link art-color-link art-w-chevron">Link</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">React Catapult</div>
+                          </div>
+                          <div class="art-price-list">
+                            Newest notification style. Catapult notification
+                            across your pages.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>React</li>
+                            <li>Styled Components</li>
+                          </ul>
+                          <a href="https://www.npmjs.com/package/react-catapult" target="_blank"
+                            class="art-link art-color-link art-w-chevron">NPM</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">hubot-loudspeaker</div>
+                          </div>
+                          <div class="art-price-list">
+                            Hubot module to alert multiple channels in slack.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>Node.js</li>
+                            <li>Hubot</li>
+                          </ul>
+                          <a href="https://www.npmjs.com/package/hubot-loudspeaker" target="_blank"
+                            class="art-link art-color-link art-w-chevron">NPM</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">Orbiter</div>
+                          </div>
+                          <div class="art-price-list">
+                            Make cool orbiting patterns.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>React</li>
+                          </ul>
+                          <a href="https://stephenferrari14.github.io/orbiter-generator/" target="_blank"
+                            class="art-link art-color-link art-w-chevron">Link</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">Proposal Website</div>
+                          </div>
+                          <div class="art-price-list">
+                            Marriage proposal to my wife disguised as a "food
+                            searching" website. Search for something in the
+                            search field and a surprise message appears.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>React</li>
+                          </ul>
+                          <a href="https://hungry-hoover-6b334e.netlify.app/" target="_blank"
+                            class="art-link art-color-link art-w-chevron">Link</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="art-a art-price">
+                        <div class="art-price-body">
+                          <div class="art-price-cost">
+                            <div class="art-number">Workout Timer</div>
+                          </div>
+                          <div class="art-price-list">
+                            Timer for workout sets.
+                          </div>
+                          <ul class="art-price-list">
+                            <li>Javascript</li>
+                            <li>React</li>
+                          </ul>
+                          <a href="https://workout.headdesk.us/" target="_blank"
+                            class="art-link art-color-link art-w-chevron">Link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <footer>
+                    <!-- copyright -->
+                    <div>© 2020 Stephen Ferrari</div>
+                    <!-- author ( Please! Do not delete it. You are awesome! :) -->
+                    <div>
+                      Template author:&nbsp;
+                      <a href="https://themeforest.net/user/millerdigitaldesign" target="_blank">Nazar Miller</a>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./static/js/jquery.min.js"></script>
+  <script src="./static/js/smooth-scrollbar.min.js"></script>
+  <script src="./static/js/overscroll.min.js"></script>
+  <script src="./static/js/swup.min.js"></script>
+  <script src="./static/js/main.js"></script>
+</body>
+</html>
