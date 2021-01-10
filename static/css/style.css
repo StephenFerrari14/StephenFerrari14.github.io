@@ -612,12 +612,10 @@ app marcup
           align-items: center;
 }
 .art-app .art-app-wrapper {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 15px;
+  margin-right: 15px;
   background: #1e1e28;
   background-size: cover;
-  width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;

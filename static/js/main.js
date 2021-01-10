@@ -26,6 +26,32 @@ $(function() {
     $('.art-menu-bar-btn , .art-menu-bar , .art-info-bar , .art-content , .art-menu-bar-btn , .art-info-bar-btn').removeClass('art-active , art-disabled');
   });
 
+  $('.art-info-bar-btn').on('click', function() {
+    $('.art-info-bar').toggleClass('art-active');
+    $('.art-menu-bar-btn').toggleClass('art-disabled');
+  });
+
+  $('.art-menu-bar-btn').on('click', function() {
+    $('.art-menu-bar-btn , .art-menu-bar').toggleClass("art-active");
+    $('.art-info-bar-btn').toggleClass('art-disabled');
+  });
+
+  $('.art-info-bar-btn , .art-menu-bar-btn').on('click', function() {
+    $('.art-content').toggleClass('art-active');
+  });
+
+  $('.art-curtain , .art-mobile-top-bar').on('click', function() {
+    $('.art-menu-bar-btn , .art-menu-bar , .art-info-bar , .art-content , .art-menu-bar-btn , .art-info-bar-btn').removeClass('art-active , art-disabled');
+  });
+
+  $('.menu-item').on('click', function() {
+    if ($(this).hasClass('menu-item-has-children')) {
+      $(this).children('.sub-menu').toggleClass('art-active');
+    } else {
+      $('.art-menu-bar-btn , .art-menu-bar , .art-info-bar , .art-content , .art-menu-bar-btn , .art-info-bar-btn').removeClass('art-active , art-disabled');
+    }
+  });
+
   // reinit
   document.addEventListener("swup:contentReplaced", function() {
 
@@ -40,47 +66,7 @@ $(function() {
       renderByPixel: true,
       continuousScrolling: true,
     });
-
-    $("#form").submit(function() {
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: $(this).serialize()
-      }).done(function() {
-
-        var tl = anime.timeline({
-          easing: 'easeOutExpo',
-        });
-
-        tl
-          .add({
-            targets: '.art-submit',
-            opacity: 0,
-            scale: .5,
-          })
-          .add({
-            targets: '.art-success',
-            scale: 1,
-            height: '45px',
-          })
-      });
-      return false;
-    });
   })
-
-  var sheets = {
-    orange: $('<link rel="stylesheet" href="css/color-1.css">'),
-    red: $('<link rel="stylesheet" href="css/color-2.css">'),
-    green: $('<link rel="stylesheet" href="css/color-3.css">'),
-    blue: $('<link rel="stylesheet" href="css/color-4.css">'),
-  };
-
-  var currentSheet = sheets.orange.appendTo($("head"));
-
-  $("a.swapColor").click(function() {
-    currentSheet.detach();
-    currentSheet = (sheets[$(this).attr("data-theme")]).appendTo($("head"));
-  });
 
   $('.open-changer').click(function() {
     $('.color-change').toggleClass("active-changer");
@@ -89,5 +75,4 @@ $(function() {
   $('.art-app').click(function() {
     $('.color-change').removeClass("active-changer");
   });
-
 });
