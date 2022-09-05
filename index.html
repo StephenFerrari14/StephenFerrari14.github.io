@@ -92,8 +92,9 @@
                   <!-- <i class="fas fa-expand"></i> -->
                 </a>
               </div>
-              <h5 class="art-name mb-10"><a href="">Stephen Ferrari</a></h5>
+              <h5 class="art-name mb-10">Stephen Ferrari</h5>
               <div class="art-sm-text">Senior Software Engineer</div>
+              <div class="art-sm-text">Touchplan</div>
             </div>
 
             <div id="scrollbar2" class="art-scroll-frame" data-scrollbar="true" tabindex="-1"
@@ -103,11 +104,11 @@
                   <ul>
                     <li>
                       <h6>City:</h6>
-                      <span>Boston, MA</span>
+                      <span>Woburn, MA</span>
                     </li>
                     <li>
                       <h6>Age:</h6>
-                      <span>28</span>
+                      <span id="age"></span>
                     </li>
                   </ul>
                 </div>
@@ -198,10 +199,10 @@
                         <div class="art-banner-dec"></div>
                         <div>
                           <p>
-                            I am Stephen, a software engineer, chip enthusiast, and avid
+                            I am Stephen, a software engineer, chip enthusiast, amateur watch maker, and avid
                             skiier. New England born working in Boston
                             focusing on backend systems and data
-                            infrastructure. In my spare time I hack on the
+                            infrastructure to make a positive impact on an industry. In my spare time I hack on the
                             Slack API, pickle food, make pasta, and play video
                             games.
                           </p>
@@ -215,7 +216,7 @@
                     <div class="col-md-4 col-6">
                       <div class="art-counter-frame" style="opacity: 1">
                         <div class="art-counter-box">
-                          <span class="art-counter" style="opacity: 1">8</span>
+                          <span id="workYears" class="art-counter" style="opacity: 1"></span>
                         </div>
                         <h6>Years Experience</h6>
                       </div>
@@ -266,9 +267,9 @@
                           </div>
                           <p>
                             Manage data infrastructure, develop data pipelines
-                            for business intelligence developers, provide
+                            for business intelligence developers, Designed and developed 
                             services for the Touchplan application to leverage
-                            relational data.
+                            relational data as well as the infrastructure for scalable and flexible microservices in GCP.    
                           </p>
                         </div>
                       </div>
@@ -536,7 +537,7 @@
                 <div class="container-fluid">
                   <footer>
                     <!-- copyright -->
-                    <div>© 2020 Stephen Ferrari</div>
+                    <div>© <span id="copywriteYear"></span> Stephen Ferrari</div>
                     <!-- author ( Please! Do not delete it. You are awesome! :) -->
                     <div>
                       Template author:&nbsp;
