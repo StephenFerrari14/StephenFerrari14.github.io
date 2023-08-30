@@ -76,15 +76,15 @@ $(function() {
     $('.color-change').removeClass("active-changer");
   });
 
-  var ageDifMs = Date.now() - new Date("1992-07-08");
-  var ageDate = new Date(ageDifMs); // miliseconds from epoch
-  var yearsOfAge = Math.abs(ageDate.getUTCFullYear() - 1970);
-  $('#age')[0].innerHTML = yearsOfAge;
+  $('#copywriteYear')[0].innerHTML = new Date().getFullYear();
 
   var ageDifMs = Date.now() - new Date("2014-05-01");
   var ageDate = new Date(ageDifMs); // miliseconds from epoch
   var yearsOfWorkExperience = Math.abs(ageDate.getUTCFullYear() - 1970);
   $('#workYears')[0].innerHTML = yearsOfWorkExperience;
 
-  $('#copywriteYear')[0].innerHTML = new Date().getFullYear();
+  var ageDifMs = Date.now() - new Date("1992-07-08");
+  var ageDate = new Date(ageDifMs); // miliseconds from epoch
+  var yearsOfAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+  $('#age')[0].innerHTML = yearsOfAge;
 });
